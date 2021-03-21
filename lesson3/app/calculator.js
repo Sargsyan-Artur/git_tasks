@@ -22,10 +22,5 @@ exports.calculate = function (a, operation, b) {
         throw new Error('one of the parameters is not correct');
     }
 
-    if (operation === '+') return(operations['+'](+a,+b));
-    if (operation === '-') return(operations['-'](+a,+b));
-    if (operation === '*') return(operations['*'](+a,+b));
-    if (operation === '/') return(operations['/'](+a,+b));
+    return(operations[operation](+a,+b));
 };
-
-
