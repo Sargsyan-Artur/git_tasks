@@ -16,28 +16,14 @@ function loadArray() {
 }
 
 
-// function getItem(array, id) {
-//   for (let i = 0; i < array.length; i++) {
-//     if (array[i].id === id) {
-//       return new Promise((resolve) => {
-//         resolve(array[i]);
-//       });
-//     }
-//   }
-	
-//   return new Promise((resolve, reject) => {
-//     reject(new Error('There is no such item in the array!'));
-//   });
-// }
-
 function getItem(array, id) {
   return new Promise(function(resolve, reject) {
     for (let i = 0; i < array.length; i++) {
       if (array[i].id === id) {
         resolve(array[i]);
       }
-      reject(new Error('There is no such item in the array!'));
     }
+    reject(new Error('There is no such item in the array!'));
   });
 }
 
