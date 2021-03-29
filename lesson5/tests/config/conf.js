@@ -1,13 +1,10 @@
 const { browser } = require("protractor");
 const yargs = require('yargs').argv; // "protractor -- --instances = 3"
 
-
-
 exports.config = {
     framework: 'mocha',
-    //directConnect: true, doesnt workkkkkkkkkkkkk,
+    // directConnect: true, doesnt workkkkkkkkkkkkk,
     seleniumAddress: 'http://localhost:4444/wd/hub', 
-    //specs: ['../spec/*.spec.js'],
     specs: ['../spec/*.spec.js'],
     
     capabilities: {
@@ -17,8 +14,7 @@ exports.config = {
         'goog:chromeOptions': {
             'w3c': false
         }
-
-        //count: 2
+        // count: 2
     },
 
     mochaOpts: {
@@ -26,15 +22,12 @@ exports.config = {
         timeout: 40000
     },
 
-
-  
-    // onComplete : function () {
+    // onComplete : function () { DOESNT WORK
     //     browser.close();
     // },
 
-    
     // onPrepare: function () {
-    //     browser.waitForAngularEnabled(false);
+    //     browser.waitForAngularEnabled(false); DOESNT WORK
     // }
 };
 

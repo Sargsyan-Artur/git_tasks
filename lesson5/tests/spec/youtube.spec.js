@@ -1,5 +1,6 @@
 const { element, browser } = require("protractor");
 const chai = require('chai');
+const { beforeEach } = require("mocha");
 const expect = chai.expect;
 
 describe('youtube', function () {
@@ -51,6 +52,11 @@ describe('youtube', function () {
         await browser.sleep(3000);
     });
 
+    beforeEach(async function () {
+        await browser.get('https://www.youtube.com/');
+        await browser.sleep(1500);
+    });
+
     after(async function () {
         await button_of_watch_later.click();
         await browser.sleep(200);
@@ -59,13 +65,13 @@ describe('youtube', function () {
         
         // delete all videos from watch_later
         while((await chosen_videos_in_watch_later_list).length) {
-            await browser.sleep(700);
+            await browser.sleep(800);
             await browser.actions().mouseMove(element(by.xpath('(//img[@id="img" and @width="100"])[1]'))).mouseMove(element(by.xpath('//button[@aria-label="Delete"][1]'))).click().perform();
         }
     });
 
     it('check dark theme is visible', async function () {
-        await browser.sleep(1500);
+        //await browser.sleep(1500);
         await avatar.click();
         await browser.sleep(2000);
         await dark_icon.click();
@@ -91,8 +97,8 @@ describe('youtube', function () {
         const videosAfterClicking = await element.all(by.id('video-title')).getText();
         
         function arraysOfVideosEqual(before, after) {
-            console.log(JSON.stringify(before));
-            console.log(JSON.stringify(after));
+            // console.log(JSON.stringify(before));
+            // console.log(JSON.stringify(after));
             return JSON.stringify(before) == JSON.stringify(after);
         }
 
@@ -100,11 +106,12 @@ describe('youtube', function () {
     });
 
     it('Add some videos to watch later, should check they were added', async function () {
-        await browser.sleep(1000);
+        //await browser.sleep(1000);
         const list_of_name_added_videos = [];
         for(let i = 1; i < 5; i++) {   
             let video = element(by.xpath(`(//a[@id="video-title-link" and @class="yt-simple-endpoint style-scope ytd-rich-grid-media"])[${i}]`));
             await browser.actions().mouseMove(video).perform();
+            await browser.sleep(500);
             await watch_later_button_above_video.click();
             let video_name = await video.getText();
             await list_of_name_added_videos.unshift(video_name);
@@ -113,7 +120,7 @@ describe('youtube', function () {
         await button_of_watch_later.click();
         await browser.sleep(2000);
         const chosen_videos_name_in_watch_later_list = await chosen_videos_in_watch_later_list.getText();
-        console.log(chosen_videos_name_in_watch_later_list);
+        //console.log(chosen_videos_name_in_watch_later_list);
 
         const a = JSON.stringify(chosen_videos_name_in_watch_later_list);
         console.log(a);
@@ -127,8 +134,8 @@ describe('youtube', function () {
         await youtube_icon.click();
         browser.sleep(2000);
         const first_video_name = JSON.stringify(await first_video.getText());
-        console.log(first_video_name);
-        await browser.sleep(6000);
+        //console.log(first_video_name);
+        await browser.sleep(3000);
         await first_video.click();
         await browser.sleep(3000);
         await like.click();
@@ -136,11 +143,11 @@ describe('youtube', function () {
         await youtube_icon.click();
         await browser.sleep(2000);
         await liked_video.click();
-        await liked_video.click();
+        //await liked_video.click();
         await browser.sleep(1500);
         
         const first_video_name_in_liked_video = JSON.stringify(await first_video_in_liked_videos.getText());
-        console.log(first_video_name_in_liked_video);
+        //console.log(first_video_name_in_liked_video);
         expect(first_video_name == first_video_name_in_liked_video).to.equal(true);
     });
 });
