@@ -102,7 +102,7 @@ describe('youtube', function () {
         await browser.sleep(1000);
         const list_of_name_added_videos = [];
         for(let i = 1; i < 5; i++) {   
-            let video = element(by.xpath(`(//yt-formatted-string[@id="video-title"])[${i}]`));
+            let video = element(by.xpath(`(//a[@id="video-title-link" and @class="yt-simple-endpoint style-scope ytd-rich-grid-media"])[${i}]`));
             await browser.actions().mouseMove(video).perform();
             await watch_later_button_above_video.click();
             let video_name = await video.getText();
@@ -118,28 +118,28 @@ describe('youtube', function () {
         console.log(a);
         const b = JSON.stringify(list_of_name_added_videos);
         console.log(b);
-        
+        browser.sleep(3000);
         expect(a == b).to.equal(true);
     });
 
-    it('like list and check they were added', async function () {
-        await youtube_icon.click();
-        const first_video_name = JSON.stringify(await first_video.getText());
-        console.log(first_video_name);
-        await browser.sleep(6000);
-        await first_video.click();
-        await browser.sleep(3000);
-        await like.click();
+    // it('like list and check they were added', async function () {
+    //     await youtube_icon.click();
+    //     const first_video_name = JSON.stringify(await first_video.getText());
+    //     console.log(first_video_name);
+    //     await browser.sleep(6000);
+    //     await first_video.click();
+    //     await browser.sleep(3000);
+    //     await like.click();
         
-        await youtube_icon.click();
-        await browser.sleep(2000);
-        await liked_video.click();
-        await liked_video.click();
-        await browser.sleep(1500);
+    //     await youtube_icon.click();
+    //     await browser.sleep(2000);
+    //     await liked_video.click();
+    //     await liked_video.click();
+    //     await browser.sleep(1500);
         
-        const first_video_name_in_liked_video = JSON.stringify(await first_video_in_liked_videos.getText());
-        console.log(first_video_name_in_liked_video);
-        expect(first_video_name == first_video_name_in_liked_video).to.equal(true);
-    });
+    //     const first_video_name_in_liked_video = JSON.stringify(await first_video_in_liked_videos.getText());
+    //     console.log(first_video_name_in_liked_video);
+    //     expect(first_video_name == first_video_name_in_liked_video).to.equal(true);
+    // });
 });
 
