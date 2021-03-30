@@ -9,7 +9,7 @@ describe('guest youtube', function () {
         browser.waitForAngularEnabled(false);
         await browser.get('https://www.youtube.com/');
         await browser.driver.manage().window().maximize();
-        await browser.sleep(1000);
+        await browser.sleep(700);
     });
 
     it('add video to watch later as a guest', async function () {
