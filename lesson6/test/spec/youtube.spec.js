@@ -63,9 +63,9 @@ describe('youtube', function () {
 
     it('check dark theme is visible', async function () {
         await PageFactory.getPage('Home').Header.avatar.click();
-        await PageFactory.getPage('Home').wait(2000);
+        await PageFactory.getPage('Home').wait(3000);
         await PageFactory.getPage('Avatar').dark_icon.click();
-        await PageFactory.getPage('Avatar').wait(2000);
+        await PageFactory.getPage('Avatar').wait(3000);
         await PageFactory.getPage('Avatar').dark_theme_button.click();
         await PageFactory.getPage('Avatar').wait(2000);
         const display_color_visible = await PageFactory.getPage('Avatar').Header.display_color.isDisplayed();

@@ -5,7 +5,7 @@ exports.config = {
     framework: 'mocha',
     // directConnect: true, doesnt workkkkkkkkkkkkk,
     seleniumAddress: 'http://localhost:4444/wd/hub', 
-    specs: ['../spec/youtube.spec.js'],
+    specs: ['../spec/*.spec.js'],
     
     capabilities: {
         shardTestFiles: yargs.instances > 1,

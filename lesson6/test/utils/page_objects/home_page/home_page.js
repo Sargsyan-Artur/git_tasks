@@ -12,8 +12,6 @@ class HomePage extends BasePage {
         this.like = new Element('like', '//button[starts-with(@aria-label, "like this")]');
         this.liked_video = new Element('liked_video', '//yt-formatted-string[text()="Liked videos"]');
         this.first_video = new Element('first_video','(//yt-formatted-string[@id="video-title" and @class="style-scope ytd-rich-grid-media"])[1]');
-
-
     }
     open() {
         return super.open(this.url);

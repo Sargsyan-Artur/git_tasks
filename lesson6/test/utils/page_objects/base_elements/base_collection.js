@@ -4,11 +4,11 @@ class Collection {
         this.collection = element.all(by.xpath(xpath));
     }
 
-    async getElement(index) {
-        const get_element_by_index = await this.collection.get(index);
+    // async getElements(index) {
+    //     const get_element_by_index = await this.collection.get(index);
         
-        return get_element_by_index;
-    }
+    //     return get_element_by_index;
+    // }
 
     // async length() {
     //     const collectionLength = await this.collection.count();

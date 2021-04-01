@@ -4,6 +4,9 @@ class Element {
         this.element = element(by.xpath(xpath));
     }
 
+    getElement() {
+        return this.element;
+    }
     
 
     isDisplayed() {
