@@ -110,6 +110,8 @@ describe('youtube', function () {
         const list_of_name_added_videos = [];
         for(let i = 1; i < 5; i++) {   
             let video = element(by.xpath(`(//a[@id="video-title-link" and @class="yt-simple-endpoint style-scope ytd-rich-grid-media"])[${i}]`));
+            
+            
             await browser.actions().mouseMove(video).perform();
             await browser.sleep(500);
             await watch_later_button_above_video.click();
