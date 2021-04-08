@@ -74,5 +74,10 @@
     "first_video": {
         "isCollection": false,
         "xpath": "(//yt-formatted-string[@id='video-title' and @class='style-scope ytd-rich-grid-media'])[1]"
+    },
+    "first_video_in_watch_later": {
+        "isCollection": false,
+        "xpath": "(//div[@id='container' and @class='style-scope ytd-playlist-video-renderer'])[1]"
     }
+    
 }

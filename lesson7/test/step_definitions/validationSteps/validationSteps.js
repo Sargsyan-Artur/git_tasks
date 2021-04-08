@@ -66,6 +66,20 @@ When(/^I like first video then i should see in liked videos$/, async () => {
     return expect(first_video_name == first_video_name_in_liked_video).to.equal(true);
 })
 
+When(/^I finished test i should delete added videos$/, async () => {
+    await elementHelper("button_of_watch_later").click();
+    await browser.sleep(500);
+    const first_video_in_watch_later = elementHelper("first_video_in_watch_later");
+    EC.elementToBeClickable.bind(first_video_in_watch_later)
+    first_video_in_watch_later.click()
+    
+    // delete all videos from watch_later
+    while((await elementHelper('chosen_videos_in_watch_later_list')).length) {
+        await browser.sleep(800);
+        await browser.actions().mouseMove(element(by.xpath('(//img[@id="img" and @width="100"])[1]'))).mouseMove(element(by.xpath('//button[@aria-label="Delete"][1]'))).click().perform();
+    }
+    expect(await elementHelper('chosen_videos_in_watch_later_list').length).equal(undefined)
+})
 
 // Then(/^"([^"]*)" should( not)? be visible$/, async (alias, notArg) => {
 //     notArg = notArg ? ' not' : '';
