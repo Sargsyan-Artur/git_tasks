@@ -1,0 +1,78 @@
+{
+    "signIn": {
+        "isCollection": false,
+        "xpath": "//ytd-button-renderer[@class = 'style-scope ytd-masthead style-suggestive size-small']"
+    },
+    "eamil_input": {
+        "isCollection": false,
+        "xpath": "//input[@type='email']"
+    },
+    "next_button": {
+        "isCollection": false,
+        "xpath": "//button[@class='VfPpkd-LgbsSe VfPpkd-LgbsSe-OWXEXe-k8QpJ VfPpkd-LgbsSe-OWXEXe-dgl2Hf nCP5yc AjY5Oe DuMIQc qIypjc TrZEUc lw1w4b']"
+    },
+    "pass_input": {
+        "isCollection": false,
+        "xpath": "//input[@aria-label='Enter your password']"
+    },
+    "nex_button_pass": {
+        "isCollection": false,
+        "xpath": "//button[@class='VfPpkd-LgbsSe VfPpkd-LgbsSe-OWXEXe-k8QpJ VfPpkd-LgbsSe-OWXEXe-dgl2Hf nCP5yc AjY5Oe DuMIQc qIypjc TrZEUc lw1w4b']"
+    },
+    "avatar": {
+        "isCollection": false,
+        "xpath": "//img[contains(@alt, 'Avatar image')]"
+    },
+    "dark_icon": {
+        "isCollection": false,
+        "xpath": "//div[@class='content-icon style-scope ytd-toggle-theme-compact-link-renderer']/yt-icon[@id='primary-icon']"
+    },
+    "dark_theme__button": {
+        "isCollection": false,
+        "xpath": "//yt-formatted-string[@id='label' and text()='Dark theme']"
+    },
+    "account_name": {
+        "isCollection": false,
+        "xpath": "//*[@id='account-name']"
+    },
+    "device_color": {
+        "isCollection": false,
+        "xpath": "//html[@dark='true']"
+    },
+    "videos": {
+        "isCollection": true,
+        "xpath": "//yt-formatted-string[@id='video-title']"
+    },
+    "youtube_icon": {
+        "isCollection": false,
+        "xpath": "//ytd-topbar-logo-renderer[@id='logo']/a/div//yt-icon[@id='logo-icon']"
+    },
+    "watch_later_button_above_video": {
+        "isCollection": false,
+        "xpath": "//ytd-thumbnail-overlay-toggle-button-renderer[@aria-label='Watch later']"
+    },
+    "button_of_watch_later": {
+        "isCollection": false,
+        "xpath": "//yt-formatted-string[text()='Watch later']"
+    },
+    "chosen_videos_in_watch_later_list": {
+        "isCollection": true,
+        "xpath": "//a[@id='video-title']"
+    },
+    "first_video_in_liked_videos": {
+        "isCollection": false,
+        "xpath": "(//a[@id='video-title' and @class='yt-simple-endpoint style-scope ytd-playlist-video-renderer'])[1]"
+    },
+    "liked_video": {
+        "isCollection": false,
+        "xpath": "//yt-formatted-string[text()='Liked videos']"
+    },
+    "like": {
+        "isCollection": false,
+        "xpath": "//button[starts-with(@aria-label, 'like this')]"
+    },
+    "first_video": {
+        "isCollection": false,
+        "xpath": "(//yt-formatted-string[@id='video-title' and @class='style-scope ytd-rich-grid-media'])[1]"
+    }
+}

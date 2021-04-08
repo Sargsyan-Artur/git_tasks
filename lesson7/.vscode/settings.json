@@ -1,0 +1,15 @@
+{
+    "editor.detectIndentation": false,
+    "window.zoomLevel": 0,
+    "cucumberautocomplete.steps": [
+        "test/step_definitions/**/*.js"
+    ],
+    "cucumberautocomplete.syncfeatures": "test/features/*.feature"
+}
+// {
+//     "cucumberautocomplete.steps": [
+//         "test/step_definitions/actionSteps/*.js"
+//         //"node_modules/qa-lib/src/step_definitions/*.js"
+//     ],
+//     "cucumberautocomplete.strictGherkinCompletion": true
+// }
