@@ -6,7 +6,7 @@ const {Before, After, Status, setDefaultTimeout} = require('cucumber');
 const { protractor } = require('protractor/built/ptor');
 setDefaultTimeout(60 * 1000);
 
-// Before(async function () {
+// Before("login", async function () {
 //     browser.waitForAngularEnabled(false);
 //     await browser.get('https://www.youtube.com/');
 //     await browser.driver.manage().window().maximize();

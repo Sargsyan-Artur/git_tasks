@@ -11,20 +11,20 @@ Feature: Youtube
 Background: 
     Given I open "https://www.youtube.com/" url
     Then I should see maximize window  
-    @login
-    Scenario: LogIn
-    # Given I open "https://www.youtube.com/" url
-    # Then I should see maximize window  
-        When I wait until "signIn" is clickable
-        Then I click "signIn" 
-        When I wait until "eamil_input" is present
-        Then I enter log "yuriAlekseyevichGagarinCosmos@gmail.com" in "eamil_input"
-        Then I click "next_button" 
-        When I wait "2" seconds
-        Then I enter pass "yurik123" in "pass_input"
-        When I wait until "nex_button_pass" is present
-        Then I click "nex_button_pass" 
-        When I wait "3" seconds
+    # @login
+    # Scenario: LogIn
+    # # Given I open "https://www.youtube.com/" url
+    # # Then I should see maximize window  
+    #     When I wait until "signIn" is clickable
+    #     Then I click "signIn" 
+    #     When I wait until "eamil_input" is present
+    #     Then I enter log "yuriAlekseyevichGagarinCosmos@gmail.com" in "eamil_input"
+    #     Then I click "next_button" 
+    #     When I wait "2" seconds
+    #     Then I enter pass "yurik123" in "pass_input"
+    #     When I wait until "nex_button_pass" is present
+    #     Then I click "nex_button_pass" 
+    #     When I wait "3" seconds
 
   
     @homepage
@@ -39,8 +39,8 @@ Background:
         When I wait "2" seconds
         Then I should see black device_color
 
-    @username
-    Scenario: Should Check username is visible
+    # @username
+    # Scenario: Should Check username is visible
         # Given I open "https://www.youtube.com/" url
         When I wait until "avatar" is clickable
         Then I click "avatar"
