@@ -1,0 +1,21 @@
+{
+  "name": "lesson9",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "chai": "^4.3.4",
+    "jsonschema": "^1.4.0",
+    "mocha": "^8.3.2"
+  }
+}

@@ -1,0 +1,17 @@
+{
+    "description": "create and get store",
+    "type": "object",
+    "proprties": {
+        "id": {
+            "type": "number",
+            "minLength": 12,
+            "maxLength": 0,
+            "required": true
+        },
+        "status": {
+            "type": "number",
+            "required": true
+        }
+        
+    }
+}
