@@ -15,6 +15,7 @@
   "dependencies": {
     "axios": "^0.21.1",
     "chai": "^4.3.4",
+    "chai-json-schema": "^1.5.1",
     "jsonschema": "^1.4.0",
     "mocha": "^8.3.2"
   }
