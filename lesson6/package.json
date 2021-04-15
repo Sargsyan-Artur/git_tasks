@@ -1,0 +1,29 @@
+{
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.19.0",
+    "@typescript-eslint/parser": "^4.19.0",
+    "eslint": "^7.22.0",
+    "eslint-plugin-react": "^7.23.1",
+    "protractor": "^7.0.0"
+  },
+  "dependencies": {
+    "chai": "^4.3.4",
+    "jasmine-spec-reporter": "^6.0.0",
+    "mocha": "^8.3.2",
+    "yargs": "^15.4.1"
+  },
+  "name": "lesson6",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "test": "protractor ./test/config/protractor.config.js --disableChecks"
+  },
+  "scripts": {
+    "protractor": "protractor test/config/conf.js",
+    "test": "mocha"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
