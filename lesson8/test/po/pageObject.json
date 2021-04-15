@@ -1,0 +1,18 @@
+{
+    "searchInput": { 
+        "isCollection": false,
+        "xpath": "//input[@id='search']"
+    },
+    "search-icon-legacy": {
+        "isCollection": false,
+        "xpath": "//button[@id='search-icon-legacy']"
+    },
+    "search_filters": {
+        "isCollection": false,
+        "xpath": "//paper-button[@aria-label='Search filters']"
+    },
+    "search_button": {
+        "isCollection": false,
+        "xpath": "//button[@id='search-icon-legacy']"
+    }
+}
